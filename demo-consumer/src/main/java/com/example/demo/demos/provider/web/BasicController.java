@@ -14,13 +14,15 @@
  * limitations under the License.
  */
 
-package com.example.demo.demos.web;
+package com.example.demo.demos.provider.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.example.demo.demos.api.User;
 
 /**
  * @author <a href="mailto:chenxilzx1@gmail.com">theonefx</a>

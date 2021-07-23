@@ -1,0 +1,28 @@
+server:
+  port: 8380
+
+management:
+  server:
+    port: 8480
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude: 'heapdump' #内存转储存在泄漏风险，关掉内存转储
+  endpoint:
+    health:
+      show-details: always
+
+spring:
+  application:
+    name: demo-consumer
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+      eager=true: spring.cloud.sentinel.eager=true
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
